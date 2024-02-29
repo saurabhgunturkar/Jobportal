@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Abhyaz Job Openings</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.abhyaz.com/CNC%20Train%20Logo-Rama%20-400%20%C3%97%20250%20px-%20-200%20%C3%97%20200%20px-%20-200%20x%20100%20px-%20-1-.gif"
+                alt="" width="130px" height="70px">
+        </div>
+        <h1>Abhyaz Career</h1>
+    </header>
+
+    <section class="advertise">
+        <!-- <img src="./Frame 1.png" alt=""> -->
+        <div class="Ellipse1"></div>
+        <div class="Ellipse2"></div>
+        <div class="Ellipse3"></div>
+        <div class="career">Let’s Start Your Career With</div>
+        <div class="abhyaz"><img src="./Abhyaz.png" alt=""></div>
+        <div class="careerTitle">Every job opportunity is a stepping stone towards unlocking your potential and shaping
+            your own success story.</div>
+        <div class="Ellipse4"></div>
+        <div class="Ellipse5">
+            <div><a href="#job-listings" class="jobOpening">Job openings</a></div>
+        </div>
+        <div class="Ellipse6"></div>
+        <div class="Ellipse8"></div>
+        <div class="Ellipse10"></div>
+        <div class="Ellipse14"></div>
+        <div class="Ellipse13"></div>
+        <div class="Ellipse15"></div>
+        <div class="Ellipse11"></div>
+        <div class="Ellipse12"></div>
+    </section>
+
+    <section id="job-listings" class="job-listings">
+        <h1 style="text-align: center;font-size: 42px;color: red;">The current openings are here...</h1>
+        <article class="job">
+            <h2>Software Developer</h2>
+            <p>Abhyaz Tech is seeking a talented software developer to join our team.</p>
+            <p>Skills: C/C++/Java/Python, Hibernate, OOPS, Microservices, Git </p>
+            <p>Location: India, IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+
+        <article class="job">
+            <h2>Full Stack Developer</h2>
+            <p>We are looking for a 3+ years experienced Full-Stack developer is a professional responsible for working on both front-end and back-end development processes.</p>
+            <p>Skills: AngularJS/ReactJs, NodeJs, MongoDB, Web Services, HTML, CSS, JavaScript, API services</p>
+            <p>Location: Pune, India IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+
+        <article class="job">
+            <h2>AngularJs Developer</h2>
+            <p>We are looking to hire a dynamic Angular Developer to join our global team.</p>
+            <p>Skills: Angular Frameworks, JavaScript, Typescript, Html, CSS, Rest API's, Bootstrap</p>
+            <p>Location: Work From Home, India IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+
+        <article class="job">
+            <h2>Marketing Specialist</h2>
+            <p>We are looking for a marketing specialist with a passion for creativity.</p>
+            <p>Location: India, IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+
+        <article class="job">
+            <h2>Web Developer (Fresher) </h2>
+            <p>We are looking for a Fresher web developer which have detail knowleadge about web development.</p>
+            <p>Skills: Responsive Web design, Html, CSS, Javascript, Bootstrap, SQL Server, Git/GitHub</p>
+            <p>Location: Bengaluru, India IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+
+        <article class="job">
+            <h2>Intern</h2>
+            <p>This is the exclusive opportunity for anyone pursuing graduation in any stream who want 6 months professional experience in Software Developement.</p>
+            <p>Skills: Any Programming Language</p>
+            <p>Location: Bengaluru, India IN</p>
+            <a href="#applicationForm">Apply Now</a>
+        </article>
+        <!-- Add more job listings as needed -->
+    </section>
+
+    <div class="line"></div>
+
+    <section class="applicationForm" id="applicationForm">
+        <h1 style="text-align: center;font-size: 42px;color:rgb(211, 150, 38);">Submit Your Application Here!</h1>
+
+        <div class="form">
+            <form id="applicationform" action="#applicationform"  >
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="resume">Resume (PDF or Word):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx">
+
+                <label for="position">Applying for Position:</label>
+                <select id="position" name="position" required>
+                    <option value="">Select Position</option>
+                    <option value="developer">Software Developer</option>
+                    <option value="developer">Full Stack Developer</option>
+                    <option value="developer">AngularJs Developer</option>
+                    <option value="manager">Marketing Specialist</option>
+                    <option value="developer">Web Developer (Fresher)</option>
+                    <option value="intern">Internship</option>
+                </select>
+
+                <label for="cover-letter">Cover Letter:</label>
+                <textarea id="cover-letter" name="cover-letter" rows="4"></textarea>
+
+                <button type="submit" onclick="submitForm(event)">Submit Application</button>
+            </form>
+
+            <div id="successmsg" class="successmsg" style="display: none;">
+                <h3>Application Submitted Successfully!</h3>
+            </div>
+            <div id="errmsg" class="errmsg" style="display: none;">
+                <h3>Please check your application once!</h3>
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>Contact us at <a href="mailto:info@abhyazjobs.com">info@abhyazjobs.com</a></p>
+    </footer>
+
+
+
+
+
+    <script>
+
+function submitForm(event) {
+    var form = document.getElementById('applicationform');
+    var isValid = form.checkValidity();
+    document.getElementById('applicationform').reset();
+
+    if (isValid) {
+        
+        document.getElementById('successmsg').style.display = 'block';
+        event.preventDefault();
+    } else {
+        document.getElementById('errmsg').style.display = 'block';
+        event.preventDefault(); // Prevent form submission on invalid input
+    }
+}
+
+    </script>
+
+
+</body>
+
+</html>
